@@ -8,9 +8,11 @@ class App extends React.Component{
 
       let obj = {name: 'Sam Smith', age: 12, email:'samsmith@gmail.com'};
       //localStorage.setItem('myData', JSON.stringify(obj));
+      let number = 41;
 
       //use session storage instead
       sessionStorage.setItem('myData', JSON.stringify(obj));
+      sessionStorage.setItem('myNumber', JSON.stringify(number));
 
    }
    //get data from local storage
@@ -18,6 +20,9 @@ class App extends React.Component{
       let data = sessionStorage.getItem('myData');
       data = JSON.parse(data);
       console.log(data.name);
+      let num = sessionStorage.getItem('myNumber');
+      num = JSON.parse(num);
+      console.log(num);
    }
 
    render(){
